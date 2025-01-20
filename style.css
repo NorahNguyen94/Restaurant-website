@@ -1,0 +1,590 @@
+:root {
+    --background-black: #313030;
+    --black: hsla(210, 40%, 9%, 1);
+    --yellow: #F3EF2E;
+    --gold:hsl(38, 61%, 73%);
+    --white: #F5F5F5;
+    --red: #BC1F1F;
+    --dark-grey: #545454;
+    --grey: #8F8F8F;
+    --fontFamily-forum: 'Forum', cursive;
+    --fontFamily-dm_sans: 'DM Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: var(--white);
+    font-family: var(--fontFamily-dm_sans);
+}
+
+.btn {
+    position: relative;
+    color: var(--yellow);
+    background: var(--dark-grey);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 2px solid rgb(120, 132, 17);
+    padding: 12px 45px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+header .btn { font-size: 1.2em; }
+
+.btn:hover {
+    background-color: var(--red);
+}
+
+/*--------------------NAVBAR------------------------*/
+nav li, a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.with-image{
+    background-image: url(image/background.jpg);
+    height: 800px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #8F8F8F;
+}
+
+.logo h1 {
+    letter-spacing: 7px;
+    flex-grow: 1;
+    text-align: center;
+    font-family: "Sofia", sans-serif;
+    color: var(--yellow);
+    text-shadow: 3px 3px 3px #ababab;
+}
+
+.logo img {
+    width: 60px;
+}
+
+.openMenu, .closeMenu {
+    display: none;
+    cursor: pointer;
+}
+
+.menu .hide { display: none;}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.navbar li,
+.rightMenu a {
+    display: inline;
+    padding: 15px;
+    font-size: 1.25rem;
+}
+
+a:hover {
+    color: var(--yellow);
+}
+
+/*---------------END NAVBAR------------------------*/
+
+/*------------------------INTRO------------------------*/
+.intro {
+    margin: 10% auto auto 10%;
+    width: 450px;
+    text-align: center;
+}
+
+.intro h1 { padding-bottom: 70px; }
+.intro p { padding-bottom: 40px; }
+
+@keyframes sliderReveal {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.intro .reveal{
+    animation: sliderReveal 1s ease forwards;
+}  
+
+.search input {
+    width: 400px;
+    padding: 6px;
+    margin: 10px;
+}
+
+.search { text-align: center;}
+
+.result .title { font-size: 3em;}
+
+/*------------------------END INTRO------------------------*/
+
+/*-----------------------SPECIALS-----------------------*/
+.title {
+    font-family: var(--fontFamily-forum);
+    color: var(--yellow);
+    font-weight: 400;
+    line-height: 1.2em;
+    font-size: calc(2rem + 2vw);
+    text-align: center;
+    margin-top: 25px;
+    border-top: 1px solid var(--dark-grey);
+    width: 40%;
+    margin-left: 30%;
+    padding-top: 10px;
+}
+
+.section-text {
+    text-align: center;
+    width: 80%;
+    margin: 15px 10% 0 auto;
+}
+
+.heading a {
+    position: absolute;
+    right: 20px;
+    text-decoration: underline;
+}
+
+.product-title {
+    font-family: var(--fontFamily-forum);
+    font-weight: 400;
+    line-height: 1.2rem;
+    font-size: 2em;
+}
+
+.price {
+    background-color: var(--gold);
+    color: var(--black);
+    max-width: max-content;
+    line-height: 1.4em;
+    padding-inline: 10px;
+}
+
+.product-detail {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.products-section {
+    background-color: var(--background-black);
+    padding-bottom: 20px;
+}
+
+.container-product, .container-offers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.product {
+    width: 400px;
+}
+
+.product img {
+    margin: 25px 0 10px 0;
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid var(--gold);
+    height: 250px;
+}
+
+/*-----------------END SPECIALS------------------*/
+
+/*------------------OFFERS------------------*/
+.container-offers .image { width: 55%; }
+
+.container-offers {
+    background-image: url(image/shape-5.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container-offers img {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.brand {
+    color: var(--gold);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    text-align: center;
+    margin-top: 15px;
+}
+/*-----------------END OFFERS------------------*/
+
+/*------------------OPENING HOURS------------------*/
+.container-opening-hour {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 10% 0 auto;
+    height: 200px;
+    background-color: var(--background-black);
+    width: 80%;
+}
+
+.holder {
+    background-image: url(image/footer-form-bg.png);
+    height: 260px;
+    margin-top: 30px;
+    display: flow-root;
+}
+
+.container-opening-hour .item {
+    width: 33%;
+    text-align: center;
+}
+/*-----------------END OPENING HOURS------------------*/
+
+/*-----------------FOOTER------------------*/
+.container-footer {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    margin-top: 40px;
+    text-align: center;
+    justify-content: space-around;
+    background-image: url(image/shape-5.png);
+}
+
+.container-footer a, p, h3 {
+    display: block;
+    padding: 5px;
+    margin-left: 13px;
+}
+
+.container-footer h3 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+}
+
+.container-footer a, p { font-size: 1.15rem; }
+
+.container-footer .box {
+    width: 300px;
+    margin-bottom: 30px;
+}
+
+.container-footer img { width: 100%; }
+
+.copyright {
+    border-top: 1px solid var(--dark-grey);
+}
+/*-----------------END FOOTER------------------*/
+
+/*-----------------ABOUT US------------------*/
+.about-us {
+    background-color: var(--grey);
+    position: absolute;
+    top: 600px;
+    left: 100px;
+    width: 400px;
+    height: 150px;
+    text-align: center;
+    font-size: 2em;
+}
+
+.about-us-text {
+    text-align: center;
+    width: 60%;
+    margin-left: 20%;
+    margin: 50px 5% 0 5%;
+}
+
+#about-us .section-text {
+    margin-top: 50px;
+}
+
+.about-us h1 {
+    margin-top: 35px;
+    font-family: 'Sofia';
+}
+
+.container-start {
+    width: 80%;
+    margin: 50px auto 0 10%;
+}
+
+.container-start img {
+    width: 100%;
+    height: 600px;
+}
+
+.about-us-item {
+    display: flex;
+    padding-top: 50px;
+    justify-content: space-around;
+}
+
+.about-us-item img {
+    width: 500px;
+    height: 400px;
+}
+
+.about-us-item:nth-child(2){
+    flex-direction: row-reverse;
+} 
+/*-----------------END ABOUT US------------------*/
+
+/*----------------------------------RESERVATION---------------------------------*/
+.reservation-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    margin: 70px 30px 0 30px;
+    column-gap: 20px;
+}
+
+.form-reservation { width: 500px; }
+.form-reservation div {
+    position: relative;
+    left: -88px;
+}
+
+.form-reservation textarea { height: 100px;}
+
+.width {
+    width: 100%;
+    padding: 6px;
+    margin-top: 20px;
+    border: 2px solid var(--dark-grey);
+}
+
+#date, #person {
+    width: 30%;
+    height: 30px;
+    margin:20px 10px 0 0;
+    border: 2px solid var(--dark-grey);
+}
+
+button[type="submit"] {
+    width: 80px;
+    height: 30px;
+    background-color: var(--gold);
+    margin-top: 30px;
+}
+/*-------------------------------END RESERVATION--------------------------------*/
+
+/*-------------------------------USER--------------------------------*/
+.user-container, .contact-container {
+    width: 80%;
+    margin: 80px auto 0 auto;
+    text-align: center;
+}
+
+.user-container img { width: 200px; }
+.user-image { margin-bottom: 40px;}
+.width-1 input {
+    width: 300px;
+    padding: 8px;
+    margin: 20px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--dark-grey);
+    color: var(--white);
+}
+/*-------------------------------END USER--------------------------------*/
+
+/*-------------------------------CONTACT--------------------------------*/
+.grid-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+    width: 67%;
+    margin: 30px auto 0 18%;
+}
+
+.grid-group input, select {
+    width: 300px;
+    padding: 8px;
+    margin-bottom: 20px;
+}
+
+.contact-container span { color: var(--red);}
+
+.message textarea {
+    width: 700px;
+    height: 150px;
+}
+/*-------------------------------END CONTACT--------------------------------*/
+
+/*-------------------------------MENU--------------------------------*/
+.show {
+    display: block;
+}
+
+.menu-section .title { margin-bottom: 30px;}
+
+.menu-container {
+    overflow: hidden;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.menu-container .product {
+    float: left;
+    width: 25%;
+    padding: 10px;
+}
+
+.menu-container .btn.active {
+    background-color: #666;
+    color: white;
+}
+
+#menu-filter { text-align: center;}
+/*-------------------------------END MENU--------------------------------*/
+
+/* For Tablet View */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .with-image { background-position: center; }
+    /*--------------------------MENU TABLET------------------------------*/
+    .menu-product {
+        display: grid;
+        grid-template-columns: 0.5fr 1fr;
+    }
+    #menu-filter { 
+        border-right: 2px solid var(--dark-grey);
+    }
+    .menu-container .product { width: 50%; }
+    .menu-product button {
+        display: block;
+        width: 80%;
+        margin: 10%;
+    }
+    /*----------------------------ABOUT US TABLET---------------------------*/
+    .about-us-item {
+        display: block;
+        margin-left: 25%;
+    }
+}
+
+/* For Mobile View */
+@media screen and (max-width: 767px) {
+    /*----------------NAVBAR MOBILE---------------------*/
+    .with-image {
+        height: 650px;
+        width: 100%;
+    }
+    .navbar .menu, .rightMenu {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        text-align: center;
+        transition: top 1s ease;
+        display: none;
+        background: #000;
+        justify-content: center;
+    }
+    .menu li { display: block;}
+    nav .closeMenu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .menu .hide { display: block;}
+
+    nav .openMenu {
+        display: block;
+        margin-right: 8px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .container .logo {
+        flex-grow: 1;
+    }
+
+    /*-----------INTRO MOBILE------------*/
+    .intro {
+        margin-left: 0;
+        width: 350px;
+    }
+    .search input { width: 240px;}
+    /*-----------OPENING HOURS MOBILE------------*/
+    .container-opening-hour {
+        flex-direction: column;
+        height: max-content;
+    }
+    .holder {
+        height: 370px;
+    }
+    .container-opening-hour .item {
+        width: 90%;
+    }
+    /*---------------------------------MENU MOBILE------------------------------*/
+    .menu-container .product { width: 50%; }
+    .menu-product button {margin: 5px;}
+
+    /*--------------------------------ABOUT US MOBILE------------------------------------*/
+    .about-us-item {
+        display: block;
+        width: 70%;
+        margin-left: 15%;
+        text-align: center;
+    }
+    .about-us-item img {
+        width: 100%;
+        height: 300px;
+    }
+    .about-us {
+        width: 200px;
+        font-size: 1.5em;
+        height: fit-content;
+        top: 450px;
+    }
+    .about-us-text { 
+        width: 80%;
+        margin-left: 10%;
+    }
+    .container-start img { height: 400px;}
+    /*--------------------------------RESERVATION MOBILE------------------------------------*/
+    .reservation-container { grid-template-columns: 1fr; }
+    .form-reservation { width: 100%;}
+    .form-reservation div {margin-left: 15%;}
+
+    /*--------------------------------CONTACT MOBILE------------------------------------*/
+    .grid-group {
+        grid-template-columns: 1fr;
+        width: 90%;
+        margin-left: 10px;
+    }
+    .grid-group input, select { width: 75%; }
+    .message textarea { width: 90%;}
+
+    /*---------------------------------USER MOBILE---------------------------------*/
+    .width-1 input { width: 80%; }
+}
